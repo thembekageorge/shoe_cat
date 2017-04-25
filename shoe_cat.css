@@ -44,3 +44,6 @@ border: 5px solid black;
 background-color: white;
   font-size: 2em;
 }
+#filtering {
+  float: left;
+}
