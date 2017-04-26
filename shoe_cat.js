@@ -19,5 +19,4 @@ document.getElementById('addBoot').addEventListener("click",addBoot);
    var bootName = document.getElementById('bootname').value;
    var bootColor = document.getElementById('bootcolor').value;
    var bootSize = document.getElementById('bootcolor').value;
-alert( bootname);
  }
