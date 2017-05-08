@@ -15,6 +15,7 @@
 
     var addStockButton = document.querySelector('.addBootStock');
     var showAvailableStock = document.querySelector('.showAvailableBoots');
+
     var addButton = document.querySelector('.addButton');
     var filterButton = document.querySelector('.filterButton');
 
@@ -35,6 +36,7 @@
     alert("in boots array : " + boots);
     function showData(data) {
     alert(data);
+
         var bootNames = [];
         var bootColors = [];
         var bootSizes = [];
