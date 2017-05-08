@@ -71,11 +71,11 @@ th {
   text-align: center;
   background-color: white;
   margin-top: 5px;
-  display: none;
+  /*display: none;*/
 }
 
 .display {
-display: none;
+/*display: none;*/
 }
 
 .field {

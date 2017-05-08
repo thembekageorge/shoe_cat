@@ -13,8 +13,8 @@
     var bootsTemplate = initTemplate('.bootsTemplate');
     var bootsElement = document.querySelector('.bootsList');
 
-  var addStockButton = document.querySelector('.addBootStock');
-  var showAvailableStock = document.querySelector('.showAvailableBoots');
+    var addStockButton = document.querySelector('.addBootStock');
+    var showAvailableStock = document.querySelector('.showAvailableBoots');
     var addButton = document.querySelector('.addButton');
     var filterButton = document.querySelector('.filterButton');
 
@@ -32,7 +32,7 @@
     quantity : 3
 
     }];
-
+    function showData(data) {
 
         var bootNames = [];
         var bootColors = [];
@@ -42,7 +42,7 @@
 
         for (var i = 0; i < data.length; i++) {
             var bootsData = data[i];
-            bootNames.push(boosData.bootName);
+            bootNames.push(bootsData.bootName);
             bootColors.push(bootsData.bootColor);
             bootSizes.push(bootsData.bootSize);
             bootPrices.push(bootsData.bootPrice);
@@ -62,7 +62,7 @@
         bootsElement.innerHTML = bootsTemplate({
             boots: data
         });
-    }
+}
 addStockButton.addEventListener('click', function() {
       var getDiv = document.querySelector('.add');
 
@@ -90,18 +90,18 @@ addStockButton.addEventListener('click', function() {
         var bootColorValue = bootColor.value;
         var bootSizeValue = bootSize.value;
         var bootPriceValue = bootPrice.value;
-        var quantity = quantity.value;
+        var quantityValue = quantity.value;
 
 
         if (bootNameValue !== ''
             && bootColorValue !== ''
-            && bootSizeValue !== '' && bootPriceValue !== '' && quantity !== '') {
+            && bootSizeValue !== '' && bootPriceValue !== '' && quantityValue !== '') {
             boots.push({
-              bootName : bootNameValue;
-              bootColor : bootColorValue;
-              bootSize : bootSizeValue;
-              bootPrice : bootPriceValue;
-              quantity : quantity;
+              bootName : bootNameValue,
+              bootColor : bootColorValue,
+              bootSize : bootSizeValue,
+              bootPrice : bootPriceValue,
+              quantity : quantityValue
             });
         }
 
