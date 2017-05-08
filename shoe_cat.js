@@ -67,6 +67,8 @@
             boots: data
         });
 }
+//When button 'Add Stock' is clicked, this will be so that the user
+// has access to the div that allows them to add stock
 addStockButton.addEventListener('click', function() {
       var getDiv = document.querySelector('.add');
 
@@ -78,6 +80,18 @@ addStockButton.addEventListener('click', function() {
        getDiv.style.display = 'none';
        }
   });
+
+  showAvailableStock.addEventListener('click', function() {
+        var getDiv = document.querySelector('.display');
+        
+         if (getDiv.style.display === 'none')
+         {
+         getDiv.style.display = 'block';
+         }
+         else {
+         getDiv.style.display = 'none';
+         }
+    });
 
     filters.addEventListener('click', function(evt){
         if (evt.target.name === 'filterButton'){
