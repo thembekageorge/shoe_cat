@@ -18,22 +18,23 @@
     var addButton = document.querySelector('.addButton');
     var filterButton = document.querySelector('.filterButton');
 
-  var bootName = document.querySelector('.bootName');
-  var bootColor = document.querySelector('.bootColor');
-  var bootSize = document.querySelector('.bootSize');
-  var bootPrice = document.querySelector('.bootPrice');
-  var quantity = document.querySelector('.quantity');
+    var bootName = document.querySelector('.bootName');
+    var bootColor = document.querySelector('.bootColor');
+    var bootSize = document.querySelector('.bootSize');
+    var bootPrice = document.querySelector('.bootPrice');
+    var quantity = document.querySelector('.quantity');
 
     var boots = [{
-    bootName : 'boot1',
-  bootColor : 'pink',
-    bootSize : 4,
-    bootPrice : 400,
-    quantity : 3
+    bootname : 'boot1',
+    bootcolor : 'pink',
+    bootsize : 4,
+    bootprice : 400,
+    bquantity : 3
 
     }];
+    alert("in boots array : " + boots);
     function showData(data) {
-
+    alert(data);
         var bootNames = [];
         var bootColors = [];
         var bootSizes = [];
@@ -42,19 +43,20 @@
 
         for (var i = 0; i < data.length; i++) {
             var bootsData = data[i];
-            bootNames.push(bootsData.bootName);
-            bootColors.push(bootsData.bootColor);
-            bootSizes.push(bootsData.bootSize);
-            bootPrices.push(bootsData.bootPrice);
-            quantities.push(bootsData.quantity);
+
+            bootNames.push(bootsData.bootname);
+            bootColors.push(bootsData.bootcolor);
+            bootSizes.push(bootsData.bootsize);
+            bootPrices.push(bootsData.bootprice);
+            quantities.push(bootsData.bquantity);
         }
 
         filters.innerHTML = filterTemplate({
             bootNames: bootNames.sort(),
-          bootColors  : bootColors.sort(),
+            bootColors  : bootColors.sort(),
             bootSizes  : bootSizes.sort(),
-              bootPrices  : bootPrices.sort(),
-          quantities  : quantities.sort(function(a,b){
+            bootPrices  : bootPrices.sort(),
+            quantities  : quantities.sort(function(a,b){
                 return a - b;
             })
         });
