@@ -1,44 +1,125 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="shoe_cat.css">
-    <title>Shoe Catalogue</title>
-  </head>
-  <body>
-    <div id="container">
-      <div id="heading">
- <img src="logo.png" alt="" align="center" id="headerimage">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="shoe_cat1.css">
+        <script src="handlebars-v4.0.5.js" charset="utf-8"></script>
+        <script class="bootsTemplate" type="text/handlebars-x">
+            {{#each boot}}
+            <tr>
+                <td>{{bootName}}</td>
+                <td>{{bootColor}}</td>
+                <td>{{bootSize}}</td>
+                <td>{{bootPrice}}</td>
+                <td>{{bootQuantity}}</td>
+            </tr>
+            {{/each}}
+        </script>
+        <script class="filterTemplate" type="text/handlebars-x">
+        <span class="field">
+            <label for="boot">Color</label>
+            <select class="bootColor" class="colorFilter">
+            <option value="">Select</option>
+            {{#each boot}}
+                <option>{{this}}</option>
+            {{/each}}
+            </select>
+        </span>
+        <span class="field">
+            <label for="boot">Size</label>
+            <select class="" class="sizeFilter">
+            <option value="">Select</option>
+            {{#each size}}
+                <option>{{this}}</option>
+            {{/each}}
+            </select>
+        </span>
+        <span class="field">
+            <label for="boot">Price</label>
+            <select class="" class="priceFilter">
+            <option value="">Select</option>
+            {{#each price}}
+                <option>{{this}}</option>
+            {{/each}}
+            </select>
+        </span>
+        <input type="button" name="filterButton" value="Filter">
+
+        </script>
+    </head>
+    <body>
+      <div class="heading">
+ <img src="logo.png" alt="" align="center" class="headerimage">
       </div>
-      <br>
-      <br>
-      <br>
-      <div id="main">
-   <input id="addBootStock" type="button" value="Add Stock">
-  <input id="showAvailableBoots" type="button" value="Show Available Boots">
-  <br>
-  <br>
-  <br>
-<br>
-<div id="adding">
-   <p>Add Stock :</p>
-  <form id="addForm" action="index.html" method="post">
-    <br>
-    <br>
-  <label>Boot name:</label><input type="text" name="bootname" value="" id="bootname">
-  <br>
-  <br>
-  <label>Boot color:</label> <input type="text" name="bootcolor" value="" id="bootcolor">
-  <br>
-  <br>
-  <label>Boot size:</label> <input type="text" name="bootsize" value="" id="bootsize">
-  <br>
-  <br>
-  <input id="addBoot" type="button" value="Add Boot">
-  </form>
-</div>
-      </div>
-    </div>
-    <script type="text/javascript" src="shoe_cat.js"></script>
-  </body>
+   <br>
+      <div class="mainmenu">
+      <input class="addBootStock" type="button" value="Add Stock">
+     <input class="showAvailableBoots" type="button" value="Show Available Boots">
+   </div>
+   <br>
+   <br>
+        <div class="container">
+            <div class="add">
+                <h1>Add Stock</h1>
+                <div class="field">
+                    <label for="bootName">Boot Name</label>
+                    <input type="text" name="bootName" class="bootName">
+                </div>
+                <div class="field">
+                    <label for="bootColor">Boot Color</label>
+                    <input type="text" name="bootColor" class="bootNamet">
+                </div>
+                <div class="field">
+                    <label for="bootSize">Boot Size</label>
+                    <input type="text" name="bootSize" class="bootSize">
+                </div>
+                <div class="field">
+                    <label for="bootPrice">Boot Price</label>
+                    <input type="text" name="bootPrice" class="bootPrice">
+                </div>
+                <div class="field">
+                    <label for="quantity">Boot Quantity</label>
+                    <input type="text" name="quantity" class="quantity">
+                </div>
+                <div class="field">
+                    <input type="button" name="" value="Add" class="addButton">
+                </div>
+            </div>
+            <div class="">
+                <h1>Filter by : </h1>
+
+                <div class="filters">
+
+                </div>
+
+            </div>
+
+            <div class="">
+
+            </div>
+            <div class="display">
+            <div class="">
+                <h1> Available Campbell Boots </h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Boot Name</th>
+                            <th>Boot Color</th>
+                            <th>Boot Size</th>
+                            <th>Boot Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bootsList">
+
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="shoe_catjs1.js" charset="utf-8"></script>
+    <script src="extra_functions.js" charset="utf-8"></script>
 </html>
