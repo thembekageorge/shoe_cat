@@ -13,6 +13,8 @@
     var bootsTemplate = initTemplate('.bootsTemplate');
     var bootsElement = document.querySelector('.bootsList');
 
+  var addStockButton = document.querySelector('.addBootStock');
+  var showAvailableStock = document.querySelector('.showAvailableBoots');
     var addButton = document.querySelector('.addButton');
     var filterButton = document.querySelector('.filterButton');
 
@@ -23,11 +25,11 @@
   var quantity = document.querySelector('.quantity');
 
     var boots = [{
-    bootName : 'boot1';
-    bootColor : 'pink'
-    bootSize : 4
-    bootPrice : 400
-    quantity : 3;
+    bootName : 'boot1',
+  bootColor : 'pink',
+    bootSize : 4,
+    bootPrice : 400,
+    quantity : 3
 
     }];
 
@@ -48,9 +50,11 @@
         }
 
         filters.innerHTML = filterTemplate({
-            boots: bootNames.sort(),
-            : bootColors.sort(),
-            : bootSizes.sort(function(a,b){
+            bootNames: bootNames.sort(),
+          bootColors  : bootColors.sort(),
+            bootSizes  : bootSizes.sort(),
+              bootPrices  : bootPrices.sort(),
+          quantities  : quantities.sort(function(a,b){
                 return a - b;
             })
         });
@@ -59,10 +63,20 @@
             boots: data
         });
     }
+addStockButton.addEventListener('click', function() {
+      var getDiv = document.querySelector('.add');
+
+       if (getDiv.style.display === 'none')
+       {
+       getDiv.style.display = 'block';
+       }
+       else {
+       getDiv.style.display = 'none';
+       }
+  });
 
     filters.addEventListener('click', function(evt){
         if (evt.target.name === 'filterButton'){
-            alert('filter!');
 
             var bootNameFilter = document.querySelector('.bootNameFilter');
             var bootColorFilter = document.querySelector('.bootColorFilter');
