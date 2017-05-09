@@ -26,11 +26,11 @@
     var quantity = document.querySelector('.quantity');
 
     var boots = [{
-    bootname : 'boot1',
-    bootcolor : 'pink',
-    bootsize : 4,
-    bootprice : 400,
-    bquantity : 3
+    bootName : 'boot1',
+    bootColor : 'pink',
+    bootSize : 4,
+    bootPrice : 400,
+    quantity : 3
 
     }];
     alert("in boots array : " + boots);
@@ -83,7 +83,7 @@ addStockButton.addEventListener('click', function() {
 
   showAvailableStock.addEventListener('click', function() {
         var getDiv = document.querySelector('.display');
-        
+
          if (getDiv.style.display === 'none')
          {
          getDiv.style.display = 'block';
@@ -116,9 +116,9 @@ addStockButton.addEventListener('click', function() {
             && bootSizeValue !== '' && bootPriceValue !== '' && quantityValue !== '') {
             boots.push({
               bootName : bootNameValue,
-              bootColor : bootColorValue,
+              bootColor :bootColorValue,
               bootSize : bootSizeValue,
-              bootPrice : bootPriceValue,
+              bootPrice :bootPriceValue,
               quantity : quantityValue
             });
         }
