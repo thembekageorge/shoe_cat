@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="shoe_cat.css">
         <script src="handlebars-v4.0.5.js" charset="utf-8"></script>
         <script class="bootsTemplate" type="text/handlebars-x">
-            {{#each boot}}
+            {{#each boots}}
             <tr>
                 <td>{{bootName}}</td>
                 <td>{{bootColor}}</td>
@@ -21,7 +21,7 @@
             <label for="boot">Color</label>
             <select class="bootColor" class="colorFilter">
             <option value="">Select</option>
-            {{#each boot}}
+            {{#each boots}}
                 <option>{{this}}</option>
             {{/each}}
             </select>
@@ -64,23 +64,23 @@
                 <h1>Add Stock</h1>
                 <div class="field">
                     <label for="bootName">Boot Name</label>
-                    <input type="text" name="bootName" class="bootName">
+                    <input type="text" name="bootname" class="bootName">
                 </div>
                 <div class="field">
                     <label for="bootColor">Boot Color</label>
-                    <input type="text" name="bootColor" class="bootColor">
+                    <input type="text" name="bootcolor" class="bootColor">
                 </div>
                 <div class="field">
                     <label for="bootSize">Boot Size</label>
-                    <input type="text" name="bootSize" class="bootSize">
+                    <input type="text" name="bootsize" class="bootSize">
                 </div>
                 <div class="field">
                     <label for="bootPrice">Boot Price</label>
-                    <input type="text" name="bootPrice" class="bootPrice">
+                    <input type="text" name="bootprice" class="bootPrice">
                 </div>
                 <div class="field">
                     <label for="quantity">Boot Quantity</label>
-                    <input type="text" name="quantity" class="quantity">
+                    <input type="text" name="quantityy" class="quantity">
                 </div>
                 <div class="field">
                     <input type="button" name="" value="Add" class="addButton">

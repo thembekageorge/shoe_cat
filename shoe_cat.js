@@ -20,6 +20,7 @@
     var filterButton = document.querySelector('.filterButton');
 
     var bootName = document.querySelector('.bootName');
+    console.log(bootName);
     var bootColor = document.querySelector('.bootColor');
     var bootSize = document.querySelector('.bootSize');
     var bootPrice = document.querySelector('.bootPrice');
@@ -31,11 +32,10 @@
     bootSize : 4,
     bootPrice : 400,
     quantity : 3
-
     }];
-    alert("in boots array : " + boots);
+    console.log("in boots array : " + boots);
     function showData(data) {
-    alert(data);
+    console.log(data);
 
         var bootNames = [];
         var bootColors = [];
@@ -46,11 +46,11 @@
         for (var i = 0; i < data.length; i++) {
             var bootsData = data[i];
 
-            bootNames.push(bootsData.bootname);
-            bootColors.push(bootsData.bootcolor);
-            bootSizes.push(bootsData.bootsize);
-            bootPrices.push(bootsData.bootprice);
-            quantities.push(bootsData.bquantity);
+            bootNames.push(bootsData.bootName);
+            bootColors.push(bootsData.bootColor);
+            bootSizes.push(bootsData.bootSize);
+            bootPrices.push(bootsData.bootPrice);
+            quantities.push(bootsData.quantity);
         }
 
         filters.innerHTML = filterTemplate({
