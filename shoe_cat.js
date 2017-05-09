@@ -110,6 +110,7 @@ addStockButton.addEventListener('click', function() {
         var bootPriceValue = bootPrice.value;
         var quantityValue = quantity.value;
 
+      console.log(bootNameValue);
 
         if (bootNameValue !== ''
             && bootColorValue !== ''
@@ -119,8 +120,9 @@ addStockButton.addEventListener('click', function() {
               bootColor :bootColorValue,
               bootSize : bootSizeValue,
               bootPrice :bootPriceValue,
-              quantity : quantityValue
+              quantititie : quantityValue
             });
+            console.log(boots);
         }
 
         showData(boots);
