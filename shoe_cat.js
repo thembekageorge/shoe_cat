@@ -25,6 +25,7 @@
     var bootSize = document.querySelector('.bootSize');
     var bootPrice = document.querySelector('.bootPrice');
     var quantity = document.querySelector('.quantity');
+   console.log(quantity);
 
     var boots = [{
     bootName : 'boot1',
@@ -120,12 +121,17 @@ addStockButton.addEventListener('click', function() {
               bootColor :bootColorValue,
               bootSize : bootSizeValue,
               bootPrice :bootPriceValue,
-              quantititie : quantityValue
+              quantity : quantityValue
             });
             console.log(boots);
         }
 
         showData(boots);
+        bootName.value = "";
+        bootColor.value = "";
+        bootSize.value = "";
+        bootPrice.value = "";
+        quantity.value = "";
     });
 
     showData(boots);
