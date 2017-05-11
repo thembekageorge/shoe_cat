@@ -28,15 +28,16 @@
 
 
     var boots = [{
+
     bootName : 'boot1',
     bootColor : 'pink',
     bootSize : 4,
     bootPrice : 400,
     quantity : 3
+
     }];
 
     function showData(data) {
-
 
         var bootNames = [];
         var bootColors = [];
