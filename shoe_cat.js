@@ -127,6 +127,7 @@ addStockButton.addEventListener('click', function() {
         }
 
         showData(boots);
+
         bootName.value = "";
         bootColor.value = "";
         bootSize.value = "";
