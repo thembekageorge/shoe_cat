@@ -14,6 +14,12 @@ input[type='button']{
   border: 2px solid #566c73;
   background-color: lightgrey;
   font-size: 1.2em;
+  padding: 8px;
+  margin: 5px;
+}
+
+.showAvailableStock {
+  margin: 10px;
 }
 select  {
   border-radius: 0.2em;
