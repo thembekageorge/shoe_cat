@@ -20,12 +20,12 @@
     var filterButton = document.querySelector('.filterButton');
 
     var bootName = document.querySelector('.bootName');
-    console.log(bootName);
+
     var bootColor = document.querySelector('.bootColor');
     var bootSize = document.querySelector('.bootSize');
     var bootPrice = document.querySelector('.bootPrice');
     var quantity = document.querySelector('.quantity');
-   console.log(quantity);
+
 
     var boots = [{
     bootName : 'boot1',
@@ -34,13 +34,13 @@
     bootPrice : 400,
     quantity : 3
     }];
-    console.log("in boots array : " + boots);
+
     function showData(data) {
-    console.log(data);
+
 
         var bootNames = [];
         var bootColors = [];
-        var bootSizes = [];
+        var bootSizes =  [];
         var bootPrices = [];
         var quantities = [];
 
@@ -111,11 +111,14 @@ addStockButton.addEventListener('click', function() {
         var bootPriceValue = bootPrice.value;
         var quantityValue = quantity.value;
 
-      console.log(bootNameValue);
 
         if (bootNameValue !== ''
             && bootColorValue !== ''
-            && bootSizeValue !== '' && bootPriceValue !== '' && quantityValue !== '') {
+            && bootSizeValue !== ''
+            && bootPriceValue !== ''
+             && quantityValue !== '') {
+
+
             boots.push({
               bootName : bootNameValue,
               bootColor :bootColorValue,
@@ -123,7 +126,7 @@ addStockButton.addEventListener('click', function() {
               bootPrice :bootPriceValue,
               quantity : quantityValue
             });
-            console.log(boots);
+
         }
 
         showData(boots);
@@ -133,6 +136,16 @@ addStockButton.addEventListener('click', function() {
         bootSize.value = "";
         bootPrice.value = "";
         quantity.value = "";
+
+        var getDiv = document.querySelector('.add');
+
+         if (getDiv.style.display === 'none')
+         {
+         getDiv.style.display = 'block';
+         }
+         else {
+         getDiv.style.display = 'none';
+         }
     });
 
     showData(boots);
