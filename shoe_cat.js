@@ -20,12 +20,11 @@
     var filterButton = document.querySelector('.filterButton');
 
     var bootName = document.querySelector('.bootName');
-    console.log(bootName);
     var bootColor = document.querySelector('.bootColor');
     var bootSize = document.querySelector('.bootSize');
     var bootPrice = document.querySelector('.bootPrice');
     var quantity = document.querySelector('.quantity');
-   console.log(quantity);
+
 
     var boots = [{
     bootName : 'boot1',
@@ -34,9 +33,9 @@
     bootPrice : 400,
     quantity : 3
     }];
-    console.log("in boots array : " + boots);
+
     function showData(data) {
-    console.log(data);
+
 
         var bootNames = [];
         var bootColors = [];
@@ -114,7 +113,9 @@ addStockButton.addEventListener('click', function() {
 
         if (bootNameValue !== ''
             && bootColorValue !== ''
-            && bootSizeValue !== '' && bootPriceValue !== '' && quantityValue !== '') {
+            && bootSizeValue !== ''
+            && bootPriceValue !== ''
+             && quantityValue !== '') {
             boots.push({
               bootName : bootNameValue,
               bootColor :bootColorValue,
