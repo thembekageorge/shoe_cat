@@ -64,7 +64,7 @@
                 return a - b;
             })
         });
-
+ console.log(filterTemplate);
         bootsElement.innerHTML = bootsTemplate({
             boots: data
         });
