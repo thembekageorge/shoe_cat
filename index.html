@@ -21,7 +21,7 @@
             <label for="boot">Color</label>
             <select class="bootColor" class="colorFilter">
             <option value="">Select</option>
-            {{#each boot}}
+            {{#each bootNames}}
                 <option>{{this}}</option>
             {{/each}}
             </select>
@@ -30,7 +30,7 @@
             <label for="boot">Size</label>
             <select class="" class="sizeFilter">
             <option value="">Select</option>
-            {{#each size}}
+            {{#each bootSizes}}
                 <option>{{this}}</option>
             {{/each}}
             </select>
@@ -39,7 +39,7 @@
             <label for="boot">Price</label>
             <select class="" class="priceFilter">
             <option value="">Select</option>
-            {{#each price}}
+            {{#each bootPrices}}
                 <option>{{this}}</option>
             {{/each}}
             </select>
