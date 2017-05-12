@@ -83,6 +83,7 @@ th {
   background-color: white;
   margin-top: 5px;
   display: none;
+  
 }
 
 .display {
@@ -95,12 +96,12 @@ display: none;
 
 .field label {
     display: inline-block;
-    background-color: #fff;
-    width : 10%;
+    /*background-color: #fff;*/
+    width : auto;
     text-align: right;
     font-weight: bold;
-    padding: 0.5em;
-    margin: 0.5em;
+    padding: 5px;
+    margin: 5px;
 }
 
 .filters {
