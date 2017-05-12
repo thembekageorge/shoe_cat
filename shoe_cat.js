@@ -129,6 +129,9 @@ addStockButton.addEventListener('click', function() {
             });
 
         }
+        else (
+       alert("you need to enter the required information");
+        );
 
         showData(boots);
 
