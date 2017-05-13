@@ -34,9 +34,12 @@
     quantity : 3
     }];
 
-    function showData(data) {
+    function showData(data, bootsList) {
 
+ if (!bootsList){
 
+   bootsList = data;
+ }
         var bootNames = [];
         var bootColors = [];
         var bootSizes = [];
@@ -64,7 +67,7 @@
         });
 
         bootsElement.innerHTML = bootsTemplate({
-            boots: data
+            boots: bootsList
         });
 }
 //When button 'Add Stock' is clicked, this will be so that the user
@@ -100,6 +103,16 @@ addStockButton.addEventListener('click', function() {
             var bootColorFilter = document.querySelector('.bootColorFilter');
             var bootSizeFilter = document.querySelector('.bootSizeFilter');
             var bootPriceFilter = document.querySelector('.bootPriceFilter');
+
+  var filteredboots = [];
+
+            for (var i = 0; i < boots.length; i++) {
+              var boot = boots[i]
+              if (boot.bootName === bootNameFilter.value){
+                filteredboots.push(boot);
+              }
+            }
+            showData(boots, filteredboots);
         }
     });
 

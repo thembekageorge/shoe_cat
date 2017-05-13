@@ -18,8 +18,8 @@
         </script>
         <script class="filterTemplate" type="text/handlebars-x">
         <span class="field">
-            <label for="boot">Color</label>
-            <select class="bootColor" class="colorFilter">
+            <label for="boot">Name</label>
+            <select class="bootNameFilter">
             <option value="">Select</option>
             {{#each bootNames}}
                 <option>{{this}}</option>
@@ -27,8 +27,17 @@
             </select>
         </span>
         <span class="field">
+            <label for="boot">Color</label>
+            <select class="bootColorFilter">
+            <option value="">Select</option>
+            {{#each bootColors}}
+                <option>{{this}}</option>
+            {{/each}}
+            </select>
+        </span>
+        <span class="field">
             <label for="boot">Size</label>
-            <select class="" class="sizeFilter">
+            <select class="bootSizeFilter">
             <option value="">Select</option>
             {{#each bootSizes}}
                 <option>{{this}}</option>
@@ -37,7 +46,7 @@
         </span>
         <span class="field">
             <label for="boot">Price</label>
-            <select class="" class="priceFilter">
+            <select class="bootPriceFilter">
             <option value="">Select</option>
             {{#each bootPrices}}
                 <option>{{this}}</option>

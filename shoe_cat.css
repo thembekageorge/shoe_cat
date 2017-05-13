@@ -61,10 +61,10 @@ th {
     text-align: left;
 }
 
-tr:nth-child(even) {background-color: white}
+/*tr:nth-child(even) {background-color: white}*/
 
 th {
-    background-color: white;
+    background-color: #42cbf4;
     color: black;
 }
 
