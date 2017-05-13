@@ -105,10 +105,28 @@ addStockButton.addEventListener('click', function() {
             var bootPriceFilter = document.querySelector('.bootPriceFilter');
 
   var filteredboots = [];
+            if (bootNameFilter.value == ""
+            && bootColorFilter.value == ""
+            && bootSizeFilter.value == ""
+            && bootPriceFilter.value == "")
+            {
+              showData(boots);
+              return;
+            }
+          
 
             for (var i = 0; i < boots.length; i++) {
               var boot = boots[i]
               if (boot.bootName === bootNameFilter.value){
+                filteredboots.push(boot);
+              }
+              if (boot.bootColor === bootColorFilter.value){
+                filteredboots.push(boot);
+              }
+              if (boot.bootSize === bootSizeFilter.value){
+                filteredboots.push(boot);
+              }
+              if (boot.bootPrice === bootPriceFilter.value){
                 filteredboots.push(boot);
               }
             }
