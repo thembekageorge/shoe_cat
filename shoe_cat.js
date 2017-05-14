@@ -34,7 +34,7 @@
     quantity : 3
     }];
 
-    function showData(data, bootsList) {
+    function display(data, bootsList) {
 
  if (!bootsList){
 
@@ -46,14 +46,34 @@
         var bootPrices = [];
         var quantities = [];
 
+var bootMap = {};
+for (var i = 0; i < data.length; i++) {
+    var bootsData = data[i];
+    if (bootMap[bootsData.bootName] === undefined){
+      bootMap[bootsData.bootName] = bootsData.bootName;
+      bootNames.push(bootsData.bootName);
+    }
+    if (bootMap[bootsData.bootColor] === undefined){
+      bootMap[bootsData.bootColor]= bootsData.bootColor;
+      bootColors.push(bootsData.bootColor);
+    }
+    if (bootMap[bootsData.bootSize] === undefined){
+      bootMap[bootsData.bootSize] = bootsData.bootSize;
+      bootSizes.push(bootsData.bootSize);
+    }
+    if (bootMap[bootsData.bootPrice] === undefined){
+      bootMap[bootsData.bootPrice] = bootsData.bootPrice;
+      bootPrices.push(bootsData.bootPrice);
+    }
+  }
         for (var i = 0; i < data.length; i++) {
             var bootsData = data[i];
 
-            bootNames.push(bootsData.bootName);
-            bootColors.push(bootsData.bootColor);
-            bootSizes.push(bootsData.bootSize);
-            bootPrices.push(bootsData.bootPrice);
-            quantities.push(bootsData.quantity);
+            // bootNames.push(bootsData.bootName);
+          //  bootColors.push(bootsData.bootColor);
+          //  bootSizes.push(bootsData.bootSize);
+        //    bootPrices.push(bootsData.bootPrice);
+        //    quantities.push(bootsData.quantity);
         }
 
         filters.innerHTML = filterTemplate({
@@ -110,10 +130,10 @@ addStockButton.addEventListener('click', function() {
             && bootSizeFilter.value == ""
             && bootPriceFilter.value == "")
             {
-              showData(boots);
+              display(boots);
               return;
             }
-          
+
 
             for (var i = 0; i < boots.length; i++) {
               var boot = boots[i]
@@ -130,7 +150,7 @@ addStockButton.addEventListener('click', function() {
                 filteredboots.push(boot);
               }
             }
-            showData(boots, filteredboots);
+            display(boots, filteredboots);
         }
     });
 
@@ -157,7 +177,7 @@ addStockButton.addEventListener('click', function() {
 
         }
 
-        showData(boots);
+        display(boots);
 
         bootName.value = "";
         bootColor.value = "";
@@ -166,6 +186,6 @@ addStockButton.addEventListener('click', function() {
         quantity.value = "";
     });
 
-    showData(boots);
+    display(boots);
 
 })();
