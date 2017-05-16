@@ -63,7 +63,7 @@ for (var i = 0; i < data.length; i++) {
     }
     if (bootMap[bootsData.bootPrice] === undefined){
       bootMap[bootsData.bootPrice] = bootsData.bootPrice;
-      bootPrices.push(bootsData.bootPrice);
+      bootPrices.push("R"+bootsData.bootPrice);
     }
   }
         for (var i = 0; i < data.length; i++) {
