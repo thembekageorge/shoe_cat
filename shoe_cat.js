@@ -30,7 +30,7 @@
     bootName : 'boot1',
     bootColor : 'pink',
     bootSize : 4,
-    bootPrice : 400,
+    bootPrice :"R"+400,
     quantity : 3
     }];
 
@@ -63,7 +63,7 @@ for (var i = 0; i < data.length; i++) {
     }
     if (bootMap[bootsData.bootPrice] === undefined){
       bootMap[bootsData.bootPrice] = bootsData.bootPrice;
-      bootPrices.push("R"+bootsData.bootPrice);
+      bootPrices.push(bootsData.bootPrice);
     }
   }
         for (var i = 0; i < data.length; i++) {
