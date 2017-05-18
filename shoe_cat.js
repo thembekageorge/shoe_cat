@@ -171,7 +171,7 @@ addStockButton.addEventListener('click', function() {
               bootName : bootNameValue,
               bootColor :bootColorValue,
               bootSize : bootSizeValue,
-              bootPrice :bootPriceValue,
+              bootPrice :"R"+bootPriceValue,
               quantity : quantityValue
             });
 
